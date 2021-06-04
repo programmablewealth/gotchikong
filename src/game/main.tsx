@@ -8,11 +8,12 @@ const Main = () => {
   const { state: { selectedGotchi } } = useWeb3();
 
   const config: GameInstance = {
-    width: 1920,
-    height: 1080,
     scale: {
       mode: Phaser.Scale.FIT,
       autoCenter: Phaser.Scale.CENTER_BOTH,
+      width: 1920,
+      height: 1080,
+      parent: 'phaser-example',
     },
     type: Phaser.AUTO,
     scene: Scenes,
@@ -30,7 +31,7 @@ const Main = () => {
         game.registry.merge({
           selectedGotchi
         });
-      }, 
+      },
     }
   }
 
